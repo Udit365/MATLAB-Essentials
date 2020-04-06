@@ -123,7 +123,6 @@ Similarly, if we want to clear all the variables at once, then we just need to p
 ```matlab
 clear
 ```
-Let's see what happens
 
 
 
