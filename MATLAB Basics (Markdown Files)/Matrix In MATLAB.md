@@ -257,10 +257,11 @@ Now, let's see how we can perform various matrix operation with other matrices. 
 5. Logarithimic Operations on a Matrix
 6. Exponential Operations on a Matrix 
 7. Determinant of a Matrix
-8. Inverse of a Matrix
-9. Eigen Values & Eigen Vectors of a Matrix
-10. Matrix Addition, Subtraction & Multiplication
-11. Elementwise Matrix Multiplication & Division
+8. Transpose of a Matrix
+9. Inverse of a Matrix
+10. Eigen Values & Eigen Vectors of a Matrix
+11. Matrix Addition, Subtraction & Multiplication
+12. Elementwise Matrix Multiplication & Division
 
 Now, let's create two `(4 x 4)` sqare matrix from the previously created `(4 x 6)` matrix to perform the above operations.
 
@@ -556,29 +557,62 @@ expm(sqmat2)
 ```
 #### Exponential Operations on a Matrix
 
-The logarithimic operations that can be performed upon a matrix are :
-* `logm()` : To find pricipal logarithm matrix
-* `expm()` : This returns `e` raised to the power of each element or,  `x ^ e`
-
-We need square matrix to perform the logarithmic operations, as follows :
+The exponential operations that can be performed upon a matrix are :
+* `mpower()` : Its just an alternate way to execute `A^B`,but, it enables operator overloading for classes.
+* `sqrtm()` : This returns the principal square root of the matrix `A`, i.e. `X*X = A`. 
+We need square matrix to perform the such exponential operations, as follows :
 ```matlab
-% Principal logarithm matrix
-logm(sqmat1)
+% Power of matrix
+mpower(sqmat1,2)
 
-% To e-power of element
-expm(sqmat2)
+% Principal square root of matrix
+sqrtm( sqmat1)
 ```
-
-
-
-
 #### Determinant of a Matrix
+To get the determinant of a matrix, we use the `det()` :
+```matlab
+det(sqmat1)
+```
+#### Transpose of a Matrix
+To get the transpose of a matrix :
+```matlab
+matrx'
+```
 #### Inverse of a Matrix
+The general function to get the inverse of a matrix is `inv()` but, this doesn't work if the matrix is non-invertible/singular.
+
+Therefore, we use `pinv()` function always, to get the inverse of the matrix even if its a singular matrix, i.e., the determinant of the matrix is zero.
+```matlab
+General_inverse = inv(sqmat1)
+Global_inverse = pinv(sqmat1)
+```
 #### Eigen Values & Eigen Vectors of a Matrix
+To get the eigen values and eigen vectors of a matrix, we use the `eig()` as follows :
+```matlab
+eig (sqmat1)
+```
 #### Matrix Addition, Subtraction & Multiplication
+To add two matrices :
+```matlab
+mat_add = sqmat1 + sqmat2
+```
+To subtract two matrices :
+```matlab
+mat_subst = sqmat1 - sqmat2
+```
+To perform matrix multiplication :
+```matlab
+mat_mult = sqmat1 * sqmat2
+```
 #### Elementwise Matrix Multiplication & Division
-
-
+To perform element wise matrix multiplication :
+```matlab
+mat_ele_mult = sqmat1 .* sqmat2
+```
+To perform element wise matrix division :
+```matlab
+mat_ele_div = sqmat1 ./ sqmat2
+```
 
 
 
