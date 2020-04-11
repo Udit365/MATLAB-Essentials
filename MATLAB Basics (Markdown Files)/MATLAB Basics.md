@@ -143,7 +143,35 @@ Similarly, if we want to clear all the variables at once, then we just need to p
 ```matlab
 clear
 ```
+##### Importing Data Into MATLAB
 
+To load any .txt/.csv/.dat file into matlab, we first need to change the directory (if the datafile is in some other directory) by using the `cd` command in the command window, as follows :
+```matlab
+cd 'C:\Users\Udit\Desktop\Desktop Folders\Octave\Dataset'
+```
+>Note :
+    Here the directory address must be written withing single quotes (`''`) only.
+
+Then, we can pass the `load` command followed by the file name to import it, as follows :
+```matlab
+load SampleData.txt
+```
+Now, to view the dataset, we can just pass the dataset name, as follows :
+```matlab
+SampleData
+```
+##### Exporting Data From MATLAB
+Suppose, we made some changes to the dataset and then, we want to save the transformed/changed data in a *.txt* file.
+
+To do this we have to pass the `save` command followed by the filename for the new dataset and the dataset variable as follows :
+```matlab
+NewData = SampleData(1:10,:)
+save TransformedData.txt NewData -ascii
+```
+Simlarly, to save our data in a *.mat* file :
+```matlab
+save TransformedData.mat NewData
+```
 
 
 
