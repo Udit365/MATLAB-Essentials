@@ -59,6 +59,26 @@ Now, in the above code, only the addition of two defined variables will be execu
 
 > Note :
     By putting `;` at the end of the code only restricts it from execution but, the variable gets defined as usual.
+    
+##### Displaying Results :
+If we want to display a string then, we can do so by using `disp()` command :
+```matlab
+disp("Hello World")
+```
+We can use this `disp()` to beautifully execute the programming outputs, as follows :
+```matlab
+disp( ["The number is : ", num2str(factVal)] )
+```
+The `num2str()` function converts the number format (integer/float/double etc.) into string.
+
+Similarly, we have a much advanced way of executing the same result, i.e., by using `fprintf()`, as follows :
+```matlab
+fprintf("factorial value is : %4i \n", factVal)
+```
+In the above code, 
+- `%` is used as a pointer that points to the second argumnet of `fprintf()`, i.e., `factVal`.
+- `4i` we restrict the output upto 4 integers.
+- `\n` represents a new line
 
 ##### Comment Lines :
 Comments are helpful in better understanding of codes and in MATLAB, anything written after a `percentage (%)` symbol is considered as a comment.
