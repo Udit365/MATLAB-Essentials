@@ -1,11 +1,71 @@
-# Loops
+# Loops & Control Structures
+---
+## Control Structure
+---
+### `if` Statement
+---
+`if` statement is a simple example of conditional execution and mostly used with loop structures.
+
+The following example illustrates a simple `if` statement :
+```matlab
+
+%Initialize a variable
+a = 2;
+
+% If-statement
+if a == 2
+  disp("The value is 2");
+endif
+```
+>Note:
+    If the condition given is not met then nothing will be executed in the command window.
+
+### `if-else` Statement 
+---
+The following example illustrates a simple `if-else` statement :
+```matlab
+% Initialize a vector
+x = [1:10]';
+
+% Simple If-else statement
+if x(1) == 2
+  disp("The value is two");
+else
+  disp("The Value is not two");
+endif
+```
+
+#### Nested `if-else` Statement
+---
+When multiple `if-else` statements are nested within each other then, its called as a nested `if-else` statment.
+
+Following is the example of a nested `if-else` statement :
+
+```matlab
+% Initialize a vector
+x = [1:10]';
+
+% Run a nested If-else statement
+if x(1) == 2
+  disp("The value is two");
+elseif x(1) == 1
+  disp("The Value is one");
+elseif x(1) == 5
+  disp("The Value is five");
+else
+  disp("The Value is not one, two or, five");
+endif
+```
+
+
+## Loops
 ---
 
 The two major loops present in MATLAB are :
 1. `for` Loop
 2. `while` Loop
 
-## `for` Loop
+### `for` Loop
 ---
 The `for` loop is used when a set of operations are to be repeated for a specific number of times.
 
@@ -18,7 +78,7 @@ for i = 1:10
     <statement n> ;
 end
 ```
-### Example of `for` Loop :
+#### Example of `for` Loop :
 ---
 > Problem Statement :
     Find the first 10 terms of a fibonacci series.
@@ -40,7 +100,7 @@ end
 forfibo
 ```
 
-## `while` Loop
+### `while` Loop
 ---
 The `while` loop is used when a set of operations is to be repeated if a certain condition is met.
 So, in case of `while` loop, we actually don't know that how many times we need to execute the code.
@@ -56,7 +116,7 @@ while i < 10
 end
 ```
 
-### Example of `while` Loop :
+#### Example of `while` Loop :
 ---
 >Problem Statement:
     Find all the terms of a fibonacci series les than 200
@@ -107,6 +167,28 @@ while (y >= 0)
     y = u * t - ( 0.5 * g * (t ^ 2) );
 end
 ```
+#### `while` loop with `break`
+---
+The `break` statement forcefully breaks the conditional/loop execution.
+
+In the below example, the `break` statements forecefully stops further execution of `while` loop when `i` became exactly equals to `6` :
+
+```matlab
+%Initialize the vector
+v = [20:2:40]';
+
+% Run while loop with break statement
+i = 1;
+while true
+  v(i) = 999;
+  i = i+1;
+  if i == 6,
+    break;
+  endif
+endwhile
+```
+
+
 
     
 
