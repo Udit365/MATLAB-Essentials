@@ -9,21 +9,23 @@ Under this section, we will learn about :
 
 
 ## Matrix Building Functions :
---- 
+---
 In MATLAB, we have some matrix building function using which we can create some special kind of matrices, as follows :
 
 1. `ones()`: Creates a matrix with each element as `1`.
-2. `zeros()`: Creates a matrix with each element as `0`.
-3. `eye()`: Creates an identity matrix.
-4. `rand()`: Creating a matrix of random numbers.
-5. `randn()`: Creating a matrix of gaussian distributed random numbers.
-6. `magic()`: Creating a magic square matrix
-7. `hilb()`: Creating a Hilbert's matrix
-8. `diag()`: Creating a diagonal matrix or, extracting the diagonal elements of a matrix.
+1. `zeros()`: Creates a matrix with each element as `0`.
+1. `repmat()`: Creates a matrix with each element as a constant number.
+1. `eye()`: Creates an identity matrix.
+1. `rand()`: Creating a matrix of random numbers.
+1. `randn()`: Creating a matrix of gaussian distributed random numbers.
+1. `magic()`: Creating a magic square matrix
+1. `hilb()`: Creating a Hilbert's matrix
+1. `diag()`: Creating a diagonal matrix or, extracting the diagonal elements of a matrix.
 
 Now, let's see some examples of the above matrix building functions.
 
-##### `ones()`:
+#### `ones()`:
+
 Create a `(3 x 4)` matrix with all the elements as `1` :
 ```matlab
 ones(3,4)
@@ -35,7 +37,7 @@ For example : Create a `(4 x 5)` matrix with all the elements as `2.53` :
 ```matlab
 2.53 * ones(4,5)
 ```
-##### `zeros()`:
+#### `zeros()`:
 Create a `(5 x 5)` matrix with all the elements as `0` :
 ```matlab
 zeros(5)
@@ -44,6 +46,13 @@ similarly, to create a `(2 x 3)` matrix with all the elements as `0` :
 ```matlab
 zeros(2,3)
 ```
+#### `repmat()`
+Crete a `(3 x 5)`matrix with all the elements as 2.5
+```matlab
+repmat(2.5,3,5)
+```
+In the above code, the first argument is the constant element, the 2nd argument is the row size and the 3rd argument is the column size.
+
 ##### `eye()`:
 An identity matrix is a square matrix with diagonal elements as `1`.
 To create a `(4 x 4)` identity matrix :
@@ -93,11 +102,11 @@ magic (5)
 ```
 ##### `hilb ()`:
 The `hilb ()` is used to create a Hilbert's matrix.
- A Hilbert's matrix is a square matrix with elements as `1/(i+j-1)` 
+ A Hilbert's matrix is a square matrix with elements as `1/(i+j-1)`
  where,
  `i` : Row Number
  `j` : Column Number
- 
+
  To create a Hilbert's matrix of `(4 x 4)` order :
  ```matlab
  hilb (4)
@@ -144,7 +153,7 @@ v = [20; 40; 50; 70]
 I = eye(4)
 
 % Adding `v` as a column to `I` to create a (4 x 5) matrix
-P = [v,I] 
+P = [v,I]
 ```
 Now, let's create an array and then use it with the previously created identity matrix `I` to create another matrix
 
@@ -255,7 +264,7 @@ Now, let's see how we can perform various matrix operation with other matrices. 
 3. Statistical Operations on a Matrix
 4. Arithmetic Operations on a Matrix
 5. Logarithimic Operations on a Matrix
-6. Exponential Operations on a Matrix 
+6. Exponential Operations on a Matrix
 7. Determinant of a Matrix
 8. Transpose of a Matrix
 9. Inverse of a Matrix
@@ -559,7 +568,7 @@ expm(sqmat2)
 
 The exponential operations that can be performed upon a matrix are :
 * `mpower()` : Its just an alternate way to execute `A^B`,but, it enables operator overloading for classes.
-* `sqrtm()` : This returns the principal square root of the matrix `A`, i.e. `X*X = A`. 
+* `sqrtm()` : This returns the principal square root of the matrix `A`, i.e. `X*X = A`.
 We need square matrix to perform the such exponential operations, as follows :
 ```matlab
 % Power of matrix
@@ -613,6 +622,3 @@ To perform element wise matrix division :
 ```matlab
 mat_ele_div = sqmat1 ./ sqmat2
 ```
-
-
-
