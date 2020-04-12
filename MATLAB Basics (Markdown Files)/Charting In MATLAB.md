@@ -25,7 +25,7 @@ while (y >= 0)
     disp (["At Time = ",num2str(t), " Location = ", num2str(y)])
     t = t + 0.1;
     y = u * t - ( 0.5 * g * (t ^ 2) );
-    
+
     time = [time ; t];
     location = [location ; y];
 end
@@ -53,7 +53,7 @@ We can write the following command to produce multiple plots in the same chart :
 % Define a vector
 x = [0:0.1:5];
 
-% Ploting the curves
+% Plotting the curves
 plot(x, sin(x), "-b", x, cos(x), "--r") 
 ```
 Another way to plot multiple curves is :
@@ -153,10 +153,10 @@ The following example shows, how we can split the chart area in 2 parts and do p
 ```matlab
 % Dividing plot area into (1x2) -- first 2 arguments
 % Plotting in the 1st grid (3rd arg.)
-subplot(1,2,1); 
+subplot(1,2,1);
 plot(t,y1);
 % Plotting in the 2nd grid (3rd arg.)
-subplot(1,2,2); 
+subplot(1,2,2);
 plot(t,y2);
 ```
 >Note :
@@ -172,7 +172,7 @@ To close the plot window, pass the `close` command in the prompt:
 close
 ```
 #### Visualizing Matrix
-If we have a matrix of different values and we want to visualize it then, by passing the matrix into `imagesc()` produces a color-grid for the matrix with divergent colors. 
+If we have a matrix of different values and we want to visualize it then, by passing the matrix into `imagesc()` produces a color-grid for the matrix with divergent colors.
 ```matlab
 % Create a (5x5) matrix
 A = magic(5)
@@ -199,10 +199,3 @@ B = magic(15);
 % Producing color-grid for the matrix
 imagesc(B), colorbar, colormap gray;
 ```
-
-
-
-
-
-
-
