@@ -6,6 +6,10 @@ The following code assigns a value of `5` to the variable `a` and `6` to the var
 a = 5
 A = 6
 ```
+To define multiple variables at once, we can use the comma (`,`) separator :
+```matlab
+a1 = 2, a2 = 4, a3 = 5
+```
 > Note :
     *MATLAB variables are case-sensitive.*
 
