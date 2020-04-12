@@ -172,7 +172,20 @@ Simlarly, to save our data in a *.mat* file :
 ```matlab
 save TransformedData.mat NewData
 ```
+##### Getting Help in MATLAB
 
+It is very obvious to forget the syntax and use of certain commands and sometimes we might need a quick reference to a certain function.
+
+This need can be fulfilled with the `help` command in MATLAB.
+
+So, suppose we need a quick referce on the `disp` command, so we can just write `help` followed by the required search object in the command window, as follows :
+
+````matlab
+help disp
+```
+##### Exiting The Interface
+---
+To quit the MATLAB session, we can just pass `exit` or, `quit` command on the command prompt.
 
 
 
