@@ -28,7 +28,7 @@ ylabel("Population of City in 000s");
 title("Population ~ Profit Corelation");
 
 %% ==================== Computing The Cost Function ====================
-fprintf("Press \''Enter\'' to compute the cost function\n");
+fprintf("Press 'Enter' to compute the cost function\n");
 pause;
 
 % Initialize Number of training example (m), Learning rate (alpha) and iterations

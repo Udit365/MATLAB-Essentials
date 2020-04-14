@@ -1,7 +1,7 @@
 % Creating a function to Compute the cost function
 function J = CostFunction (x,y,theta)
 
-m = length(y)
+m = length(y);
 J = 0; % Initialize the Cost Function
 
 % Calculating the hypothesis 
