@@ -1,3 +1,4 @@
-Navigate to projects :
+## Navigate to projects :
 
-1. [Linear Regression](Machine Learning Projects\Linear Regression)
+1. [Population-Profit Data](Linear_Regression)
+2. 
