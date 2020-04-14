@@ -19,4 +19,4 @@ Now, we have to determine in which city they have to expand their outlets.
 
 ***Dataset :***
 Get the dataset for the problem :
-[Population-Profit Data](Datasets\PopulatinProfit.txt)
+[Population-Profit Data](Datasets\PopulationProfit.txt)
