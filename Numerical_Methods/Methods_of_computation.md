@@ -35,7 +35,16 @@ The convergence occurs when, there is no significant change in the result with i
 Let's run this Heron's algorithm in MATLAB to compute ![](https://latex.codecogs.com/gif.latex?%5Csqrt%7B2%7D) :
 
 ```MATLAB
+x = 0.6; % Intial guess for x^(0.5)
+tolerance = 10^(-4); % Will stop the loop when error is below this tolerance
+err = 1; % Initial guess for error
 
+% Itrative computation
+% ----------------------
 
-
+while (err > tolerance)
+  xNew = 0.5*(x + (2/x));
+  err = abs(x - xNew)
+  x = xNew;
+end
 ```
