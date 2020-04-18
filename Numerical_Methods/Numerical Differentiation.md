@@ -6,8 +6,12 @@ From the definition of *`f'(x)`* :
 
 The above formula to find the dervative of *`f(x)`* is called the *forward difference formula*, however, there are other two types of formula as well to find the derivative, as follows :
 
-***Backward Difference Formula***
+***Backward Difference Formula :***
+
+![](http://latex2png.com/pngs/1ed32630c6956ffa1e8a7f3e022826ef.png)
 
 
 
-***Central Difference Formula***
+***Central Difference Formula :***
+
+![](http://latex2png.com/pngs/8d554bbcb099dc6773aadfdc60b3e168.png)
