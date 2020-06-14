@@ -213,11 +213,11 @@ array = [1,2,3,4]
 Q = [array; I]
 ```
 
-## Subsetting of Matrix
+## Sub-setting of Matrix
 
 ---
 
-Let's create a `(6 x 4)` matrix for performing various subsetting operation :
+Let's create a `(6 x 4)` matrix for performing various sub-setting operation :
 
 ```matlab
 matrx = [
@@ -280,7 +280,7 @@ Scalar_pow = power(matrx,3)
 % For Non-square matrix
 Scalar_pow2 = matrx .^ 3
 
-% For sqare matrix
+% For square matrix
 Scalar_pow3 = matrx(:,1:4) ^ 3
 
 Scalar_sqrt = sqrt (matrx)
@@ -335,14 +335,14 @@ Now, let's see how we can perform various matrix operation with other matrices. 
 3. Reshaping of a Matrix
 4. Statistical Operations on a Matrix
 5. Arithmetic Operations on a Matrix
-6. Logarithimic Operations on a Matrix
+6. Logarithmic Operations on a Matrix
 7. Exponential Operations on a Matrix
 8. Determinant of a Matrix
 9. Transpose of a Matrix
 10. Inverse of a Matrix
 11. Eigen Values & Eigen Vectors of a Matrix
 12. Matrix Addition, Subtraction & Multiplication
-13. Elementwise Matrix Multiplication & Division
+13. Element-wise Matrix Multiplication & Division
 
 Now, let's create two `(4 x 4)` sqare matrix from the previously created `(4 x 6)` matrix to perform the above operations.
 
@@ -395,7 +395,7 @@ reshape(matrx,6,4)
 
 > Note:
 
-    The above reshape operation don't transpose the the matix rather it just stacks the matrix elements to provide the desired dimension
+    The above reshape operation don't transpose the the matrix rather it just stacks the matrix elements to provide the desired dimension
 
 Similarly, we can make a column matrix (vector) from the `(4 x 6)` matrix as follows :
 
