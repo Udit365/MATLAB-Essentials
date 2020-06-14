@@ -14,7 +14,7 @@ The hypothesis for linear regression is :
 The matrix form of the above equation is :
 ![](https://latex.codecogs.com/gif.latex?%5C%20h_%7B%5Ctheta%7D%28x%29%20%3D%20%7B%5Ctheta%7D%5ETx)
 
-Now the unvectorized impplementation of this hypothesis function in MATLAB/OCTAVE would be as follows :
+Now the unvectorized implementation of this hypothesis function in MATLAB/OCTAVE would be as follows :
 
 ```MATLAB
 prediction = 0.0;
@@ -22,7 +22,7 @@ for j = 1:n+1
   prediction = prediction + ( theta(j) * x(j) );
 end
 ```
-The vectorized impplementation of the above code would be :
+The vectorized implementation of the above code would be :
 
 ```MATLAB
 prediction = theta' * x
@@ -80,4 +80,3 @@ z =  sum (V .* W)
  ```MATLAB
  z = w' * v
  ```
- 

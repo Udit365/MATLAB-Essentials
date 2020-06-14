@@ -3,17 +3,19 @@
 
 MATLAB files are saved with a `.m` extension and can be edited with any text editor.
 
-To open the MATLAB editor, we need to pass the follwing command in the command window -:
+To open the MATLAB editor, we need to pass the following command in the command window -:
+
 ```matlab
 edit FileName
 ```
-The above command will create a MATLAB file with name as *"FileName"* which can be saved once we finish working with an extension of `.m`.
+The above command will create a MATLAB file with name as "_FileName_" which can be saved once we finish working with an extension of `.m`.
 
 MATLAB editor helps us in writing multiline codes that can be executed as a block later.
 
 ## Types of MATLAB Files
 ---
 MATLAB files are of two types :
+
 1. Script Files
 2. Function Files
 
@@ -85,18 +87,18 @@ Then write the function as follows and save it :
 % For the polynomial function we need 1 output variable and 2 input variable :
 
 function result = PolyFunc (n,x)
-  
+
   Co = 1;
-  vec = [1:n]; 
-  
+  vec = [1:n];
+
   C = [Co, 1 ./ vec]; % element-wise division for C-terms
-  
+
   x = [1, x .^ vec]; % element-wise exponent for X-terms
-  
+
  series = C .* x; % Generating the polynomial series
- 
+
  result = sum (series); % Adding up the series elements
-  
+
 end
 ```
 To run the function file in command window, pass the file name as follows :
