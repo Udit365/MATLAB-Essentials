@@ -1,12 +1,19 @@
 # Loops & Control Structures
+
 ---
+
 ## Control Structure
+
 ---
+
 ### `if` Statement
+
 ---
+
 `if` statement is a simple example of conditional execution and mostly used with loop structures.
 
 The following example illustrates a simple `if` statement :
+
 ```matlab
 
 %Initialize a variable
@@ -17,12 +24,17 @@ if a == 2
   disp("The value is 2");
 endif
 ```
->Note:
+
+> Note:
+
     If the condition given is not met then nothing will be executed in the command window.
 
-### `if-else` Statement 
+### `if-else` Statement
+
 ---
+
 The following example illustrates a simple `if-else` statement :
+
 ```matlab
 % Initialize a vector
 x = [1:10]';
@@ -36,7 +48,9 @@ endif
 ```
 
 #### Nested `if-else` Statement
+
 ---
+
 When multiple `if-else` statements are nested within each other then, its called as a nested `if-else` statment.
 
 Following is the example of a nested `if-else` statement :
@@ -57,19 +71,17 @@ else
 endif
 ```
 
-
 ## Loops
+
 ---
 
 The two major loops present in MATLAB are :
+
 1. `for` Loop
 2. `while` Loop
 
-### `for` Loop
----
-The `for` loop is used when a set of operations are to be repeated for a specific number of times.
+for
 
-The below `for` loop syntax shows, how we can execute a certain code for 10 times :
 ```matlab
 for i = 1:10
     <statement 1> ;
@@ -78,12 +90,17 @@ for i = 1:10
     <statement n> ;
 end
 ```
+
 #### Example of `for` Loop :
+
 ---
+
 > Problem Statement :
+
     Find the first 10 terms of a fibonacci series.
 
-***Solution :***
+**_Solution :_**
+
 ```matlab
 % Define the number of times the loop needs to be executed
 n = 10;
@@ -101,11 +118,14 @@ forfibo
 ```
 
 ### `while` Loop
+
 ---
+
 The `while` loop is used when a set of operations is to be repeated if a certain condition is met.
 So, in case of `while` loop, we actually don't know that how many times we need to execute the code.
 
-The below `while` loop syntax shows, how we can execute a certain code only when the given codnition is satisfied :
+The below `while` loop syntax shows, how we can execute a certain code only when the given condition is satisfied :
+
 ```matlab
 while i < 10
     <statement 1> ;
@@ -117,11 +137,15 @@ end
 ```
 
 #### Example of `while` Loop :
+
 ---
->Problem Statement:
+
+> Problem Statement:
+
     Find all the terms of a fibonacci series les than 200
 
-***Solution :***
+**_Solution :_**
+
 ```matlab
 % Create an array to store the numbers
 fiboWhile = [1,1];
@@ -135,23 +159,29 @@ end
 % Execute the result
 fiboWhile = fiboWhile(1 : end-1)
 ```
-In the `while` loop solution, we get the array with last element exceeeding the condition, i.e., greater than *200* because, the number executed as a result of     `(final loop execution - 1)` th loop,
+
+In the `while` loop solution, we get the array with last element exceeding the condition, i.e., greater than _200_ because, the number executed as a result of `(final loop execution - 1)` th loop,
 
 Thus, to not show that number, we pass the following argument after the loop :
 
 ```matlab
 fiboWhile = fiboWhile(1 : end-1)
 ```
-Alternatively, we can also pass the following argument that basically converts the last number to *null* :
+
+Alternatively, we can also pass the following argument that basically converts the last number to _null_ :
+
 ```matlab
 fiboWhile (end) = {}
 ```
+
 Let's see another example of `while` loop
 
->Problem Statement :
+> Problem Statement :
+
     Calculate the location of the ball thrown upwards at every 0.1 seconds until it reaches the ground when the initial velocity is 20 m/s.
 
-***Solution :***
+**_Solution :_**
+
 ```matlab
 % Initiate variables
 
@@ -167,11 +197,14 @@ while (y >= 0)
     y = u * t - ( 0.5 * g * (t ^ 2) );
 end
 ```
+
 #### `while` loop with `break`
+
 ---
+
 The `break` statement forcefully breaks the conditional/loop execution.
 
-In the below example, the `break` statements forecefully stops further execution of `while` loop when `i` became exactly equals to `6` :
+In the below example, the `break` statements forcefully stops further execution of `while` loop when `i` became exactly equals to `6` :
 
 ```matlab
 %Initialize the vector
@@ -187,18 +220,3 @@ while true
   endif
 endwhile
 ```
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
