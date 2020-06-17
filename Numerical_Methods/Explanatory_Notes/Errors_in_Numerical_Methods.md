@@ -256,5 +256,5 @@ This is because the _machine precision_ of MATLAB is ![](https://latex.codecogs.
 
 > **_Notes :_**
 
-    Truncation error decreases with `h`, however, machine precesion can determine how small our `h` should be.
+    Truncation error decreases with `h`, however, machine precession can determine how small our `h` should be.
     Round-off error increases with `h`.
