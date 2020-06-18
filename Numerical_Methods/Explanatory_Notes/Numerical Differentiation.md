@@ -1,31 +1,30 @@
 ## Numerical Differentiation
 
-From the definition of *`f'(x)`* :
+From the definition of _`f'(x)`_ :
 
-![](https://latex.codecogs.com/gif.latex?f%27%28x%29%20%3D%20%5Clim_%7Bh%5Cto%200%7D%5Cfrac%7Bf%28x&plus;h%29-f%28x%29%7D%7Bh%7D%20%5CRightarrow%20f%27%28x%29%20%5Capprox%20%5Cfrac%7Bf%28x&plus;h%29-f%28x%29%7D%7Bh%7D)
+![](https://latex.codecogs.com/gif.latex?f%27%28x%29%20%3D%20%5Clim_%7Bh%5Cto%200%7D%5Cfrac%7Bf%28x+h%29-f%28x%29%7D%7Bh%7D%20%5CRightarrow%20f%27%28x%29%20%5Capprox%20%5Cfrac%7Bf%28x+h%29-f%28x%29%7D%7Bh%7D)
 
-The above formula to find the dervative of *`f(x)`* is called the *forward difference formula*, however, there are other two types of formula as well to find the derivative, as follows :
+The above formula to find the derivative of _`f(x)`_ is called the _forward difference formula_, however, there are other two types of formula as well to find the derivative, as follows :
 
-***Backward Difference Formula :***
+**_Backward Difference Formula :_**
 
 ![](http://latex2png.com/pngs/1ed32630c6956ffa1e8a7f3e022826ef.png)
 
-
-
-***Central Difference Formula :***
+**_Central Difference Formula :_**
 
 ![](http://latex2png.com/pngs/8d554bbcb099dc6773aadfdc60b3e168.png)
 
 However, the accuracy of both forward and backward difference formula is ![](http://latex2png.com/pngs/667959016b5bed7c1c9f08884b652222.png), whereas, central difference formula is more accrate, i.e., accuracy = ![](http://latex2png.com/pngs/b4643694b3d0d3d3dafa4b8b6f3cb245.png).
 
-So, everytime we decrease the step-size (`h`) by a factor of `10`, the error decrease by a factor of `10` for forward and backward difference formula and that of a factor of `100` with central difference formula.
+So, every time we decrease the step-size (`h`) by a factor of `10`, the error decrease by a factor of `10` for forward and backward difference formula and that of a factor of `100` with central difference formula.
 
-***Example-1 :***
+**_Example-1 :_**
 
-Find the error in finding the dervative of ![](http://latex2png.com/pngs/d82f68d2ea96363b2efdf2d5eb23dfd9.png) using forward, backward and central difference formula, when the step size is ![](http://latex2png.com/pngs/02a227ed02ebc1f37247850f33c67c5c.png).
+Find the error in finding the derivative of ![](http://latex2png.com/pngs/d82f68d2ea96363b2efdf2d5eb23dfd9.png) using forward, backward and central difference formula, when the step size is ![](http://latex2png.com/pngs/02a227ed02ebc1f37247850f33c67c5c.png).
 
-***Solution :***
+**_Solution :_**
 The MATLAB code for the solution of the above problem is :
+
 ```MATLAB
 x = 1; % Initiate "x"
 
@@ -57,29 +56,29 @@ fprintf('The error with central difference formula is : %d\n',CentralErr);
 
 The result of the above MATLAB code shows how the error is significantly less in case of central difference formula.
 
+### Higher Order Derivatives
 
-### Higher Order Derivaties
 ---
 
 The formulae for higher order derivaties with single variable using central difference formula is :
 
-***Second Order Derivative :***
+**_Second Order Derivative :_**
 
 ![](http://latex2png.com/pngs/2b9773a58e8dfdd1eac8f45ab3de394e.png) ; ![](http://latex2png.com/pngs/a8ccca787d6b130dd9d7e41e533c04f1.png)
 
-***Third Order Derivative :***
+**_Third Order Derivative :_**
 
 ![](http://latex2png.com/pngs/fb5ca4b9297afc0776aa46ba3fc1b6ea.png) ; ![](http://latex2png.com/pngs/a8ccca787d6b130dd9d7e41e533c04f1.png)
 
-***Example***
+**_Example_**
 
-The double derivative of  ![](http://latex2png.com/pngs/d82f68d2ea96363b2efdf2d5eb23dfd9.png) :
+The double derivative of ![](http://latex2png.com/pngs/d82f68d2ea96363b2efdf2d5eb23dfd9.png) :
 
 ![](http://latex2png.com/pngs/c7514d0c56395a9899196866083ee1dd.png)
 
 Find out the double derivaties of ![](http://latex2png.com/pngs/d82f68d2ea96363b2efdf2d5eb23dfd9.png) in MATLAB with a step size of ![](http://latex2png.com/pngs/02a227ed02ebc1f37247850f33c67c5c.png)
 
-***Solution :***
+**_Solution :_**
 
 The MATLAB code is :
 
@@ -104,22 +103,23 @@ fprintf('The calculated value for the second order derivative of tanx : %f\n',nu
 fprintf('The error associated is : %d\n',Error);
 ```
 
-***Physical Example***
+**_Physical Example_**
 
 Consider :</br>
 The rate of chemical reaction is given by :
 ![](http://latex2png.com/pngs/3b049d9a4fbab8aa93a3763761d84e96.png)
 
 To find ![](http://latex2png.com/pngs/dab943632dc99904084acc7325b608c3.png)
- using central difference formula.
+using central difference formula.
 
-* Choose ![](http://latex2png.com/pngs/8a58f0d8090703dcdd80ef11e64820a8.png)
-* Try with other values of `h`
-* Optimal value of ![](http://latex2png.com/pngs/2903c884113fdad441aac72ec0471da8.png)
+- Choose ![](http://latex2png.com/pngs/8a58f0d8090703dcdd80ef11e64820a8.png)
+- Try with other values of `h`
+- Optimal value of ![](http://latex2png.com/pngs/2903c884113fdad441aac72ec0471da8.png)
 
-***Solution :***
+**_Solution :_**
 
 The MATLAB code is :
+
 ```MATLAB
 k = 1000;
 EbyR = 2500;
@@ -151,7 +151,8 @@ fprintf('The numerical differentiation value is : %f\n',numDiff);
 fprintf('The error associated is : %d\n',error);
 ```
 
-### Partial Derivaties
+### Partial Derivatives
+
 ---
 
 Consider the following equation :
